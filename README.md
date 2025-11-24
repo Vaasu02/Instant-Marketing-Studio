@@ -20,8 +20,8 @@ BrandBlast is an AI-powered application that turns a simple product idea into a 
     Create a `.env.local` file in the root directory and add your Gemini API Key:
     ```env
     GEMINI_API_KEY=your_gemini_api_key_here
+    STABILITY_API_KEY=your_stability_api_key_here
     ```
-    *(Note: Stability AI key is hardcoded for this demo as per assignment instructions)*
 
 4.  **Run the development server:**
     ```bash
