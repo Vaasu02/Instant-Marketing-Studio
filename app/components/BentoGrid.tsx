@@ -27,8 +27,9 @@ export function BentoGrid({ data }: BentoGridProps) {
 
     return (
         <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
+
             {/* Large Image Card (2x3) */}
-            <div className="md:col-span-2 md:row-span-3 relative group rounded-3xl overflow-hidden border border-gray-100 bg-white shadow-sm">
+            <div className="md:col-span-2 md:row-span-3 relative group rounded-3xl overflow-hidden border border-black bg-white shadow-sm">
                 <Image
                     src={data.imageUrl}
                     alt="Generated Product Lifestyle"
@@ -53,7 +54,7 @@ export function BentoGrid({ data }: BentoGridProps) {
             </div>
 
             {/* Slogan Card (1x1) */}
-            <div className="md:col-span-1 md:row-span-1 p-6 rounded-3xl border border-gray-100 bg-white shadow-sm flex flex-col justify-center relative group">
+            <div className="md:col-span-1 md:row-span-1 p-6 rounded-3xl border border-black bg-white shadow-sm flex flex-col justify-center relative group">
                 <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Slogan</h3>
                 <p className="text-xl font-bold text-gray-900 leading-tight">
                     "{data.slogan}"
@@ -74,12 +75,12 @@ export function BentoGrid({ data }: BentoGridProps) {
             </div>
 
             {/* Social Post Card (1x2) */}
-            <div className="md:col-span-1 md:row-span-2 p-6 rounded-3xl border border-gray-100 bg-white shadow-sm flex flex-col relative group">
+            <div className="md:col-span-1 md:row-span-2 p-6 rounded-3xl border border-black bg-white shadow-sm flex flex-col relative group">
                 <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Social Post</h3>
                 <div className="flex-1 font-medium text-gray-600 leading-relaxed whitespace-pre-wrap">
                     {data.socialPost}
                 </div>
-                <div className="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                <div className="mt-4 pt-4 border-t border-gray-200 flex justify-between items-center">
                     <span className="text-xs text-gray-400">280 chars</span>
                     <button
                         onClick={() => handleCopy(data.socialPost, 'social')}

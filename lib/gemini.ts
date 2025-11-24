@@ -27,11 +27,11 @@ export async function generateMarketingCopy(productName: string, description: st
 
         const response = await model.generateContent(prompt);
 
-        // Extract raw text
+
         const text = response.response.text();
         if (!text) throw new Error("Empty response from Gemini");
 
-        // Clean ```json … ``` wrapping
+
         const cleanText = text.replace(/```json|```/g, "").trim();
 
         return JSON.parse(cleanText);

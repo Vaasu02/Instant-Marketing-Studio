@@ -34,11 +34,11 @@ BrandBlast is an AI-powered application that turns a simple product idea into a 
 ## 📝 Technical Write-up (Assignment Submission)
 
 **AI Models Used:**
-*   **Text:** Google Gemini 1.5 Flash (via `@google/genai`).
+*   **Text:** Google Gemini 2.5 Flash.
 *   **Image:** Stability AI SDXL 1.0 (via direct API).
 
 **Why I Chose Them:**
-I selected **Gemini 1.5 Flash** for its exceptional speed and low latency, which is critical for a real-time "magic" feel. It excels at creative writing (slogans/copy). For visuals, **Stability AI SDXL** was chosen because it offers high-fidelity, photorealistic image generation that is easy to integrate via a simple REST API, ensuring a "wow" factor for the product shots.
+I selected **Gemini 2.5 Flash** for its exceptional speed and low latency, which is critical for a real-time "magic" feel. It excels at creative writing (slogans/copy). For visuals, **Stability AI SDXL** was chosen because it offers high-fidelity, photorealistic image generation that is easy to integrate via a simple REST API, ensuring a "wow" factor for the product shots.
 
 **How AI is Used:**
 The app uses a chained AI workflow. First, the user's input is sent to Gemini to generate marketing copy and a *refined, detailed image prompt* optimized for Stable Diffusion. This optimized prompt is then sent to Stability AI to generate the visual asset. This "prompt engineering by AI" ensures much higher quality results than raw user input.

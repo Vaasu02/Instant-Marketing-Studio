@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { generateMarketingCopy } from "@/lib/gemini";
-import { generateLifestyleImage } from "@/lib/stability"; // your existing Stability file
+import { generateLifestyleImage } from "@/lib/stability";
 
 export async function POST(request: Request) {
     try {
@@ -13,11 +13,11 @@ export async function POST(request: Request) {
             );
         }
 
-        // 1. Gemini → Slogan + Social + Image Prompt
+
         const copyData = await generateMarketingCopy(productName, description);
         const { slogan, socialPost, imagePrompt } = copyData;
 
-        // 2. Stability AI → Generate Image
+
         const imageUrl = await generateLifestyleImage(imagePrompt);
 
         return NextResponse.json({
